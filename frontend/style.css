@@ -1,0 +1,272 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f5132;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.game {
+  background: #1b1b1b;
+  max-width: 400px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+select,
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 20px;
+  background: #d62828;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a4161a;
+}
+
+#message {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.wheel-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.wheel {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 8px solid #d4af37;
+  background: conic-gradient(
+    #0b0b0b 0deg 10deg,
+    #b00020 10deg 20deg,
+    #0b0b0b 20deg 30deg,
+    #b00020 30deg 40deg,
+    #0b0b0b 40deg 50deg,
+    #b00020 50deg 60deg,
+    #0b0b0b 60deg 70deg,
+    #b00020 70deg 80deg,
+    #0b0b0b 80deg 90deg,
+    #b00020 90deg 100deg,
+    #0b0b0b 100deg 110deg,
+    #b00020 110deg 120deg,
+    #0b0b0b 120deg 130deg,
+    #b00020 130deg 140deg,
+    #0b0b0b 140deg 150deg,
+    #b00020 150deg 160deg,
+    #0b0b0b 160deg 170deg,
+    #b00020 170deg 180deg,
+    #0b0b0b 180deg 190deg,
+    #b00020 190deg 200deg,
+    #0b0b0b 200deg 210deg,
+    #b00020 210deg 220deg,
+    #0b0b0b 220deg 230deg,
+    #b00020 230deg 240deg,
+    #0b0b0b 240deg 250deg,
+    #b00020 250deg 260deg,
+    #0b0b0b 260deg 270deg,
+    #b00020 270deg 280deg,
+    #0b0b0b 280deg 290deg,
+    #b00020 290deg 300deg,
+    #0b0b0b 300deg 310deg,
+    #b00020 310deg 320deg,
+    #0b0b0b 320deg 330deg,
+    #b00020 330deg 340deg,
+    #0b0b0b 340deg 350deg,
+    #16803c 350deg 360deg
+  );
+  position: relative;
+  transition: transform 3s cubic-bezier(0.15, 0.75, 0.25, 1);
+}
+
+.center {
+  width: 65px;
+  height: 65px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#balanceChart {
+  margin-top: 25px;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.roulette-area {
+  width: 320px;
+  height: 320px;
+  margin: 25px auto;
+  position: relative;
+}
+
+.real-wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  border: 10px solid #c9a227;
+  background: conic-gradient(
+    #16803c 0deg 9.47deg,
+    #111 9.47deg 18.94deg,
+    #b00020 18.94deg 28.41deg,
+    #111 28.41deg 37.88deg,
+    #b00020 37.88deg 47.35deg,
+    #111 47.35deg 56.82deg,
+    #b00020 56.82deg 66.29deg,
+    #111 66.29deg 75.76deg,
+    #b00020 75.76deg 85.23deg,
+    #111 85.23deg 94.7deg,
+    #b00020 94.7deg 104.17deg,
+    #111 104.17deg 113.64deg,
+    #b00020 113.64deg 123.11deg,
+    #111 123.11deg 132.58deg,
+    #b00020 132.58deg 142.05deg,
+    #111 142.05deg 151.52deg,
+    #b00020 151.52deg 160.99deg,
+    #111 160.99deg 170.46deg,
+    #b00020 170.46deg 179.93deg,
+    #111 179.93deg 189.4deg,
+    #b00020 189.4deg 198.87deg,
+    #111 198.87deg 208.34deg,
+    #b00020 208.34deg 217.81deg,
+    #111 217.81deg 227.28deg,
+    #b00020 227.28deg 236.75deg,
+    #111 236.75deg 246.22deg,
+    #b00020 246.22deg 255.69deg,
+    #111 255.69deg 265.16deg,
+    #b00020 265.16deg 274.63deg,
+    #111 274.63deg 284.1deg,
+    #b00020 284.1deg 293.57deg,
+    #111 293.57deg 303.04deg,
+    #b00020 303.04deg 312.51deg,
+    #111 312.51deg 321.98deg,
+    #b00020 321.98deg 331.45deg,
+    #111 331.45deg 340.92deg,
+    #b00020 340.92deg 350.39deg,
+    #111 350.39deg 360deg
+  );
+  transition: transform 4s cubic-bezier(0.12, 0.75, 0.2, 1);
+}
+
+.inner-ring {
+  width: 58%;
+  height: 58%;
+  background: radial-gradient(circle, #6b2f12, #2b1208);
+  border: 6px solid #d4af37;
+  border-radius: 50%;
+  position: absolute;
+  top: 21%;
+  left: 21%;
+}
+
+.hub {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #f6d36b, #8f6b12);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 152px;
+  box-shadow: 0 0 8px black;
+  transform-origin: 8px 138px;
+  transition: transform 4s cubic-bezier(0.12, 0.75, 0.2, 1);
+}
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 24px solid #ffd166;
+  position: absolute;
+  top: -8px;
+  left: 146px;
+  z-index: 5;
+}
+
+.wheel-number {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 148px;
+  top: 148px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+  transform-origin: 12px 12px;
+}
+
+.roulette-table {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 8px;
+  max-width: 700px;
+  margin: 25px auto;
+}
+
+.zero {
+  background: #16803c;
+  color: white;
+  font-weight: bold;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+}
+
+.roulette-table button {
+  min-height: 42px;
+  border: 1px solid white;
+  background: #b00020;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.roulette-table button:nth-child(even) {
+  background: #111;
+}
+
+.roulette-table button:hover,
+.roulette-table button.selected {
+  outline: 3px solid #ffd166;
+}

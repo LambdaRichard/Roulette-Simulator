@@ -1,0 +1,6 @@
+C:\Users\DOANJ\Downloads\roullete-simmulator> pip install flask flask-cors
+
+C:\Users\DOANJ\Downloads\roullete-simmulator> python backend/app.py
+
+Open index.html with google Chrome or Microsoft Edge.
+

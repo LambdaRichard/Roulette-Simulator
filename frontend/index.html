@@ -1,0 +1,106 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roulette Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <h1>Roulette Simulator</h1>
+
+  <p>Balance: $<span id="balance">1000</span></p>
+
+<label>Bet Amount</label>
+<input id="amount" type="number" value="10" min="1">
+
+<div class="roulette-table">  
+    <button class="zero" onclick="selectBet('straight', '0')">0</button>
+    <button class="zero" onclick="selectBet('straight', '00')">00</button>
+
+  <div class="number-grid">
+    <button onclick="selectBet('straight', '3')">3</button>
+    <button onclick="selectBet('straight', '6')">6</button>
+    <button onclick="selectBet('straight', '9')">9</button>
+    <button onclick="selectBet('straight', '12')">12</button>
+    <button onclick="selectBet('straight', '15')">15</button>
+    <button onclick="selectBet('straight', '18')">18</button>
+    <button onclick="selectBet('straight', '21')">21</button>
+    <button onclick="selectBet('straight', '24')">24</button>
+    <button onclick="selectBet('straight', '27')">27</button>
+    <button onclick="selectBet('straight', '30')">30</button>
+    <button onclick="selectBet('straight', '33')">33</button>
+    <button onclick="selectBet('straight', '36')">36</button>
+
+    <button onclick="selectBet('straight', '2')">2</button>
+    <button onclick="selectBet('straight', '5')">5</button>
+    <button onclick="selectBet('straight', '8')">8</button>
+    <button onclick="selectBet('straight', '11')">11</button>
+    <button onclick="selectBet('straight', '14')">14</button>
+    <button onclick="selectBet('straight', '17')">17</button>
+    <button onclick="selectBet('straight', '20')">20</button>
+    <button onclick="selectBet('straight', '23')">23</button>
+    <button onclick="selectBet('straight', '26')">26</button>
+    <button onclick="selectBet('straight', '29')">29</button>
+    <button onclick="selectBet('straight', '32')">32</button>
+    <button onclick="selectBet('straight', '35')">35</button>
+
+    <button onclick="selectBet('straight', '1')">1</button>
+    <button onclick="selectBet('straight', '4')">4</button>
+    <button onclick="selectBet('straight', '7')">7</button>
+    <button onclick="selectBet('straight', '10')">10</button>
+    <button onclick="selectBet('straight', '13')">13</button>
+    <button onclick="selectBet('straight', '16')">16</button>
+    <button onclick="selectBet('straight', '19')">19</button>
+    <button onclick="selectBet('straight', '22')">22</button>
+    <button onclick="selectBet('straight', '25')">25</button>
+    <button onclick="selectBet('straight', '28')">28</button>
+    <button onclick="selectBet('straight', '31')">31</button>
+    <button onclick="selectBet('straight', '34')">34</button>
+  
+
+   <button onclick="selectBet('red')">Red</button>
+   <button onclick="selectBet('black')">Black</button>
+   <button onclick="selectBet('odd')">Odd</button>
+   <button onclick="selectBet('even')">Even</button>
+  </div>
+</div>
+ 
+<p>Selected Bet: <span id="selectedBet">None</span></p>
+
+<button onclick="spin()">Spin</button>
+
+  <label>Simulation Spins</label>
+  <input id="simulationSpins" type="number" value="1000" min="1">
+
+  <button onclick="runSimulation()">Run Simulation</button>
+
+  <p id="simulationStats"></p>
+
+  <div class="roulette-area">
+  <div class="pointer"></div>
+
+  <div id="wheel" class="real-wheel">
+    <div id="wheelNumbers"></div>
+    <div class="inner-ring"></div>
+    <div class="hub"></div>
+  </div>
+
+  <div id="ball" class="ball"></div>
+  </div>
+
+  <h2 id="result"></h2>
+  <p id="message"></p>
+
+  <canvas id="balanceChart"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <select id="wheelType">
+  <option value="american">American</option>
+  <option value="european">European</option>
+  </select>
+
+  <script src="app.js"></script>
+</body>
+</html>
